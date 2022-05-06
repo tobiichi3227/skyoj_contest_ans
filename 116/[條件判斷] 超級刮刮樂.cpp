@@ -56,6 +56,7 @@ void solve()
         sum=sum+250;
     }
     sum=sum-500;
+    cout<<sum<<'\n';
 }
 
 int main()
