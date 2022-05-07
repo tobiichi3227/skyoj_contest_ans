@@ -27,67 +27,91 @@ void solve()
 {
     /*
         應該類似kattis-mia那題，目前使用原code，之後修改
+        以修改完成
     */
     int a{}, b{};
     cin >> a >> b;
-    if(a==1){
-        if(b==1){
-            cout<<"Tie!";
-        }
-        if(b==2){
-            cout<<"Player Wins!";
-        }
-        if(b==3){
-            cout<<"Tie!";
-        }
-        if(b==4){
-            cout<<"Computer Wins!";
-        }
-    }
-    else if(a==2){
 
-        if(b==1){
-            cout<<"Computer Wins!";
+    if (a & 1) {
+        if (b & 1) {
+            cout << "Tie!\n";
+        } else {
+            if (a == 1) {
+                cout << (b > 3 ? "Computer Wins!\n" : "Player Wins!\n");
+            } else {
+                cout << (b < 3 ? "Computer Wins!\n" : "Player Wins!\n");
+            }
         }
-        if(b==2){
-            cout<<"Tie!";
-        }
-        if(b==3){
-        cout<<"Player Wins!";
-        }
-        if(b==4){
-            cout<<"Tie!";
-        }
-    }
-    else if(a==3){
-            if(b==1){
-            cout<<"Tie!";
-        }
-        if(b==2){
-            cout<<"Computer Wins!";
-        }
-        if(b==3){
-            cout<<"Tie!";
-        }
-        if(b==4){
-            cout<<"Player Wins!";
+    } else {
+        if (!(b & 1)) {
+            cout << "Tie!\n";
+        } else {
+            if (a == 2) {
+                cout << (b < 2 ? "Computer Wins!\n" : "Player Wins!\n");
+            } else {
+                cout << (b > 2 ? "Computer Wins!\n" : "Player Wins!\n");
+            }
         }
     }
-    else if(a==4){
-        if(b==1){
-            cout<<"Player Wins!";
-        }
-        if(b==2){
-            cout<<"Tie!";
-        }
-        if(b==3){
-            cout<<"Computer Wins!";
-        }
-        if(b==4){
-            cout<<"Tie!";
-        }
-    }
-    cout<<"\n";
+
+    // if(a==1){
+    //     if(b==1){
+    //         cout<<"Tie!";
+    //     }
+    //     if(b==2){
+    //         cout<<"Player Wins!";
+    //     }
+    //     if(b==3){
+    //         cout<<"Tie!";
+    //     }
+    //     if(b==4){
+    //         cout<<"Computer Wins!";
+    //     }
+    // }
+    // else if(a==2){
+    //
+    //     if(b==1){
+    //         cout<<"Computer Wins!";
+    //     }
+    //     if(b==2){
+    //         cout<<"Tie!";
+    //     }
+    //     if(b==3){
+    //     cout<<"Player Wins!";
+    //     }
+    //     if(b==4){
+    //         cout<<"Tie!";
+    //     }
+    // }
+    // else if(a==3){
+    //         if(b==1){
+    //         cout<<"Tie!";
+    //     }
+    //     if(b==2){
+    //         cout<<"Computer Wins!";
+    //     }
+    //     if(b==3){
+    //         cout<<"Tie!";
+    //     }
+    //     if(b==4){
+    //         cout<<"Player Wins!";
+    //     }
+    // }
+    // else if(a==4){
+    //     if(b==1){
+    //         cout<<"Player Wins!";
+    //     }
+    //     if(b==2){
+    //         cout<<"Tie!";
+    //     }
+    //     if(b==3){
+    //         cout<<"Computer Wins!";
+    //     }
+    //     if(b==4){
+    //         cout<<"Tie!";
+    //     }
+    // }
+    // cout<<"\n";
 }
 
 int main()
