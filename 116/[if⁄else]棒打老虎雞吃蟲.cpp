@@ -27,7 +27,7 @@ void solve()
 {
     /*
         應該類似kattis-mia那題，目前使用原code，之後修改
-        以修改完成
+        已修改完成
     */
     int a{}, b{};
     cin >> a >> b;

@@ -28,34 +28,26 @@ void solve()
     /*
         不清楚題序是什麼，目前使用原code，之後修改
     */
-    int a,b,c,d,e,f,sum=0;
+    int a{} ,b{}, sum{};
     cin>>a>>b;
-    c=a/10;
-    d=b/10;
-    e=a%10;
-    f=b%10;
-    if(c==d){
-        sum=sum+50;
+    int c{ a/10 }, d{ b/10 }, e{ a%10 }, f{ b%10 };
+
+    if (c == d || e == f || e == d) {
+        sum += 50;
     }
-    if(e==f){
-        sum=sum+50;
+    if (a % 2) {
+        sum += 100;
     }
-    if(e==d){
-        sum=sum+50;
+    if (f == 2 || f == 5 || f == 8) {
+        sum += 100;
     }
-    if(a%2==1){
-        sum=sum+100;
+    if (a == b) {
+        sum += 200;
     }
-    if(f==2||f==5||f==8){
-        sum=sum+100;
+    if (!sum) {
+        sum += 250;
     }
-    if(a==b){
-        sum=sum+200;
-    }
-    if(sum==0){
-        sum=sum+250;
-    }
-    sum=sum-500;
+    sum -= 500;
     cout<<sum<<'\n';
 }
 
