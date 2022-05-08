@@ -12,13 +12,19 @@ int main()
     */
     int n{}, val{}, sum{}, cnt{};
     cin >> n;
-    while (n--) {
-        cin >> val;
-        sum += val;
-        if (val >= 2000) {
-            ++cnt;
-        }
+    vector<int> arr(n);
+    for (auto &i : arr) {
+        cin >> i;
     }
+    sum = std::accumulate(all(arr), 0);
+    cnt = std::count(all(arr), [](const int val) { return val >= 2000 });
+//     while (n--) {
+//         cin >> val;
+//         sum += val;
+//         if (val >= 2000) {
+//             ++cnt;
+//         }
+//     }
 
     if (sum >= 88000 && cnt >= 5) {
         cout << "10888\n";
