@@ -17,7 +17,7 @@ int main()
         swap(a, b);
     }
 
-    if ((a - b) == 0) {
+    if (a == b) {
         cout << "all dead\n";
     } else {
         cout << (a - b) << '\n';
