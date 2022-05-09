@@ -1,24 +1,7 @@
-#include <bits/stdc++.h>
-using namespace std;
+def miyuki_is_my_wife():
+    n = int(input())
+    arr = list(map(int, input().split()))
+    print(max(arr), '\n')
 
-#define miyuki_is_my_wife ios::sync_with_stdio(false), cin.tie(nullptr)
-
-int main()
-{
-    miyuki_is_my_wife;
-
-    /*
-        水爛
-    */
-    int n{}, m{}, val{};
-    cin >> n;
-    while (n--) {
-        cin >> val;
-        m = max(m, val);
-    }
-
-    cout << m << '\n';
-
-    return 0;
-}
-
+if __name__ == '__main__':
+    miyuki_is_my_wife()
