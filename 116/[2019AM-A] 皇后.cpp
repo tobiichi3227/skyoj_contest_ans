@@ -16,7 +16,7 @@ int main()
         cout << "0\n";
     } else if (a == c || b == d) {
         cout << "1\n";
-    } else if (abs(a - c) == (b - d) {
+    } else if (abs(a - c) == (b - d)) {
         cout << "1\n";
     } else {
         cout << "2\n";
