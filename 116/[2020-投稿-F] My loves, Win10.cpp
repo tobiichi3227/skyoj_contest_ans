@@ -17,43 +17,28 @@ int main()
         cin >> i;
     }
     bool ok = true;
+    bool all_devide = (arr.back() % k == 0 ? true : false);
     for (int i = 0; i < n - 1; ++i) {
+        if (arr[i] % k != 0)
+            all_devide = false;
         if (m == 1) {
             if (!(arr[i] < arr[i+1])) {
-                cout << "0\n";
                 ok = 0;
-                break;
             }
         } else if (m == 2) {
             if (!(arr[i] == arr[i+1])) {
-                cout << "0\n";
                 ok = 0;
-                break;
             }
 
         } else if (m == 3) {
             if (!(arr[i] > arr[i+1])) {
-                cout << "0\n";
                 ok = 0;
-                break;
             }
         }
     }
-    if (ok) {
-        cout <<"1\n";
-    }
-    bool is_all_devide = true;
-    for (auto &i : arr) {
-        if (i % k != 0) {
-            is_all_devide = false;
-            break;
-        }
-    }
-    if (is_all_devide) {
-        cout << "Oh, win10 I love you.\n";
-    } else {
-        cout << "Please, I want to meet win10.\n";
-    }
+    cout << (ok ? "1\n" : "0\n");
+
+    cout << (all_devide ? "Oh, win10 I love you.\n" : "Please, I want to meet win10.\n");
 
     return 0;
 }
