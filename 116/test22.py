@@ -1,25 +1,17 @@
-#include <bits/stdc++.h>
-using namespace std;
+import math
 
-#define miyuki_is_my_wife ios::sync_with_stdio(false), cin.tie(nullptr)
+def miyuki_is_my_wife():
+    n = int(input())
+    is_prime = True
+    for i in range(2, math.sqrt(n)):
+        if n % i == 0:
+            is_prime = False
+            break
+    
+    if is_prime:
+        print('prime\n')
+        exit()
+    print('composite\n')
 
-int main()
-{
-    miyuki_is_my_wife;
-
-    /*
-        就是個質數判斷而已
-    */
-    int a{};
-    bool is_prime{true};
-    for (int i = 2; i <= sqrt(a); ++i) {
-        if (a % i == 0) {
-            is_prime = false;
-        }
-    }
-
-    cout << (is_prime ? "prime\n" : "composite\n");
-
-    return 0;
-}
-
+if __name__ == '__main__':
+    miyuki_is_my_wife()
