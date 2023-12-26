@@ -8,9 +8,9 @@ def get_irreducible_fraction(p: int, q: int) -> tuple[int, int]:
 
 
 def main():
-    n, m = map(int, input().split())
+    n = map(int, input().split())
     assert n % 2 == 0, "N must a even number"
-    assert m % 2 == 0, "M must a even number"
+    # assert m % 2 == 0, "M must a even number"
 
     matrix = [list(map(int, input().split())) for _ in range(n)]
     pooled_matrix = [[""] * (m // 2) for _ in range((n // 2))]
