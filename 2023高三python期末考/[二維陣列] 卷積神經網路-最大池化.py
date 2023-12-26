@@ -2,7 +2,7 @@
 
 
 def main():
-    n = map(int, input().split())
+    n = int(input())
     assert n % 2 == 0, "N must a even number"
     # assert m % 2 == 0, "M must a even number"
 
