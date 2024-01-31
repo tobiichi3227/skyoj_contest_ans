@@ -1,32 +1,17 @@
-tp = input()
-a = "91195278778119"
-b = ""
-for i in range(len(tp)):
-    if tp[i] == "T":
-        a = a[0:-1]
-    else:
-        a += tp[i]
-    # if tp[i] == "T":
-    #     a = a[0:-1]
-    # elif tp[i] == "1":
-    #     a += "1"
-    # elif tp[i] == "2":
-    #     a += "2"
-    # elif tp[i] == "3":
-    #     a += "3"
-    # elif tp[i] == "4":
-    #     a += "4"
-    # elif tp[i] == "5":
-    #     a += "5"
-    # elif tp[i] == "6":
-    #     a += "6"
-    # elif tp[i] == "7":
-    #     a += "7"
-    # elif tp[i] == "8":
-    #     a += "8"
-    # elif tp[i] == "9":
-    #     a += "9"
+def main():
+    b = [9, 1, 1, 9, 5, 2, 7, 8, 7, 7, 8, 1, 1, 9]
+    oup = ""
+    inp = input()
+    for i in range(len(inp)):
+        if inp[i] == "T":
+            b.pop(-1)
+        else:
+            b.append(inp[i])
+    b.reverse()
+    for j in b:
+        oup += str(j)
+    print(oup)
 
-for i in range(len(a)):
-    b += a[-(i + 1)]
-print(b)
+
+if __name__ == "__main__":
+    main()
